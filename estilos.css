@@ -1,0 +1,142 @@
+body {
+  font-family: Open Sans, Lato, sans-serif;
+  background-color: #f2f2f2;
+  color: #333333;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imagenes/mapa-banderas.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.07;
+  z-index: -1;
+}
+
+.header {
+  padding: 10px;
+  margin: 20px;
+}
+
+.jc {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+h1 {
+  color: #142850;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+  font-family: Poppins, sans-serif;
+}
+
+h2 {
+  color: #27496d;
+  font-size: 30px;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  align-items: start;
+  margin: 0 20px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+article {
+  display: inline-block;
+  background-color: whitesmoke;
+  border: 2px solid #c9c9c9;
+  padding: 20px;
+  margin: 24px;
+  position: relative;
+  height: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+article:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  background-color: #1e335e;
+  color: white;
+}
+
+article:hover h2 {
+  color: rgb(205, 180, 37);
+}
+
+article header {
+  display: flex;
+  align-items: flex-start;
+}
+
+img.flag {
+  width: 80px;
+  height: 50px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  object-fit: cover;
+}
+
+img.reference {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: #f0f6fa;
+  border-left: 4px solid #88c1d0;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  margin: 50px auto;
+  font-size: 0.95em;
+  color: #333;
+  border-radius: 10px;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
+  img.reference {
+    width: 50%;
+    height: auto;
+  }
+  section {
+    padding: 20px;
+  }
+}
